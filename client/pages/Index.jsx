@@ -25,15 +25,15 @@ export default function Index() {
       {/* Background Pattern */}
       <div className="background-pattern">
         <div className="pattern-container">
-          <span className="pattern-text">HSHX1+}]#+X>SK+SP</span>
+          <span className="pattern-text">HSHX1+&#125;]#+X>SK+SP</span>
           <span className="pattern-text">NBFLGO#+X>SK+SPOZ</span>
           <span className="pattern-text">E0SHG6WVGO#+X>S>S</span>
           <span className="pattern-text">NC\L25BFLGOFLGD>K</span>
-          <span className="pattern-text">AXJ{AE0SHG6NBFLGO</span>
+          <span className="pattern-text">AXJ&#123;AE0SHG6NBFLGO</span>
           <span className="pattern-text">C\L2NBFGO#+X>S6N+</span>
           <span className="pattern-text">VGO#+X>HG6NBGHZ9+</span>
           <span className="pattern-text">D>KSO?AG6NBFLGO#+</span>
-          <span className="pattern-text">PXJ{AX0SHG6NH0LGO</span>
+          <span className="pattern-text">PXJ&#123;AX0SHG6NH0LGO</span>
           <span className="pattern-text">4SUSO5N1JGHZ9+D>K</span>
         </div>
       </div>
