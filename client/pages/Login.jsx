@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 export default function Login() {
@@ -20,6 +20,8 @@ export default function Login() {
     // Handle login logic here
     console.log("Login attempt:", formData);
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="login-container vaultify-bg-gradient min-h-screen relative">
@@ -54,6 +56,30 @@ export default function Login() {
           <div className="shape-2"></div>
           <div className="shape-3"></div>
         </div>
+      </div>
+
+      {/* Animated Back Button */}
+      <div className="absolute top-4 left-4 z-30">
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
+          className="animated-back-btn group flex items-center gap-2"
+          aria-label="Go back"
+        >
+          <span className="chevron-icon inline-flex h-8 w-8 items-center justify-center rounded-full">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="transition-transform duration-300 group-hover:-translate-x-1"
+            >
+              <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+          <span className="label">Back</span>
+        </button>
       </div>
 
       {/* Decorative Layer Overlay */}
@@ -92,7 +118,7 @@ export default function Login() {
               If you don't have an account register <br />
               You can{" "}
               <Link
-                to="/"
+                to="/register"
                 className="text-[#B95DFE] font-semibold hover:underline"
               >
                 Register here !

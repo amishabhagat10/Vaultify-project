@@ -97,30 +97,30 @@ export default function Index() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <a
-                href="#features"
+              <Link
+                to="/features"
                 className="text-white text-[18px] font-inter hover:text-vaultify-purple transition-colors"
               >
                 Features
-              </a>
-              <a
-                href="#what-we-offer"
+              </Link>
+              <Link
+                to="/what-we-offer"
                 className="text-white text-[18px] font-inter hover:text-vaultify-purple transition-colors"
               >
                 What We Offer
-              </a>
-              <a
-                href="#faq"
+              </Link>
+              <Link
+                to="/faq"
                 className="text-white text-[18px] font-inter hover:text-vaultify-purple transition-colors"
               >
                 FAQ's
-              </a>
-              <a
-                href="#about"
+              </Link>
+              <Link
+                to="/about"
                 className="text-white text-[18px] font-inter hover:text-vaultify-purple transition-colors"
               >
                 About Us
-              </a>
+              </Link>
             </nav>
 
             {/* Desktop Wallet Button */}
@@ -185,34 +185,34 @@ export default function Index() {
           {mobileMenuOpen && (
             <div className="sm:hidden absolute top-full left-0 right-0 bg-vaultify-darker/95 backdrop-blur-md border-t border-white/10 z-50">
               <nav className="flex flex-col space-y-4 p-6">
-                <a
-                  href="#features"
+                <Link
+                  to="/features"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-white text-lg font-inter hover:text-vaultify-purple transition-colors"
                 >
                   Features
-                </a>
-                <a
-                  href="#what-we-offer"
+                </Link>
+                <Link
+                  to="/what-we-offer"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-white text-lg font-inter hover:text-vaultify-purple transition-colors"
                 >
                   What We Offer
-                </a>
-                <a
-                  href="#faq"
+                </Link>
+                <Link
+                  to="/faq"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-white text-lg font-inter hover:text-vaultify-purple transition-colors"
                 >
                   FAQ's
-                </a>
-                <a
-                  href="#about"
+                </Link>
+                <Link
+                  to="/about"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-white text-lg font-inter hover:text-vaultify-purple transition-colors"
                 >
                   About Us
-                </a>
+                </Link>
 
                 {/* Mobile Wallet Button */}
                 <div className="pt-4 border-t border-white/10">
@@ -265,6 +265,22 @@ export default function Index() {
             >
               {isConnecting ? "Connecting..." : isConnected ? "Wallet Connected" : "Connect Wallet"}
             </button>
+            {isConnected && (
+              <div className="mt-4 sm:mt-6 flex justify-center gap-3 sm:gap-4">
+                <Link
+                  to="/login"
+                  className="text-white border border-white/30 text-base sm:text-[18px] font-bold font-inter px-6 sm:px-8 py-3 rounded-[18px] hover:border-vaultify-purple hover:text-vaultify-purple transition-all duration-300"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="bg-purple-gradient-alt text-white text-base sm:text-[18px] font-bold font-inter px-6 sm:px-8 py-3 rounded-[18px] hover:transform hover:scale-105 transition-all duration-300"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            )}
 
             {error && (
               <div className="mt-6 max-w-md mx-auto">
@@ -532,20 +548,7 @@ export default function Index() {
             <p className="text-vaultify-text-gray text-lg sm:text-xl lg:text-[27px] font-bold font-inter mb-8">
               Store, verify, and share with blockchain-level security.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/register"
-                className="bg-purple-gradient-alt text-white text-base sm:text-[18px] font-bold font-inter px-6 sm:px-8 py-3 rounded-[18px] hover:transform hover:scale-105 transition-all duration-300 inline-block"
-              >
-                Create Your Account
-              </Link>
-              <Link
-                to="/login"
-                className="text-white border border-white/30 text-base sm:text-[18px] font-bold font-inter px-6 sm:px-8 py-3 rounded-[18px] hover:border-vaultify-purple hover:text-vaultify-purple transition-all duration-300 inline-block"
-              >
-                Sign In
-              </Link>
-            </div>
+            {/* CTA actions removed as requested */}
           </div>
         </section>
 
