@@ -29,15 +29,10 @@ const App = () => (
   </QueryClientProvider>
 );
 
-// Ensure root is only created once
+// Create root once and render
 const container = document.getElementById("root");
-let root;
-
-if (!container._reactRoot) {
-  root = createRoot(container);
-  container._reactRoot = root;
-} else {
-  root = container._reactRoot;
+if (container && !container.hasAttribute('data-root-created')) {
+  container.setAttribute('data-root-created', 'true');
+  const root = createRoot(container);
+  root.render(<App />);
 }
-
-root.render(<App />);
