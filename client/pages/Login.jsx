@@ -32,16 +32,16 @@ export default function Login() {
       {/* Background Pattern */}
       <div className="login-background-pattern">
         <div className="login-pattern-container">
-          <span className="login-pattern-text">HSHX1+&#125;]#+X>SK+SP</span>
-          <span className="login-pattern-text">NBFLGO#+X>SK+SPOZ</span>
-          <span className="login-pattern-text">E0SHG6WVGO#+X>S>S</span>
-          <span className="login-pattern-text">NC\L25BFLGOFLGD>K</span>
+          <span className="login-pattern-text">HSHX1+&#125;]#+X&gt;SK+SP</span>
+          <span className="login-pattern-text">NBFLGO#+X&gt;SK+SPOZ</span>
+          <span className="login-pattern-text">E0SHG6WVGO#+X&gt;S&gt;S</span>
+          <span className="login-pattern-text">NC\L25BFLGOFLGD&gt;K</span>
           <span className="login-pattern-text">AXJ&#123;AE0SHG6NBFLGO</span>
-          <span className="login-pattern-text">C\L2NBFGO#+X>S6N+</span>
-          <span className="login-pattern-text">VGO#+X>HG6NBGHZ9+</span>
-          <span className="login-pattern-text">D>KSO?AG6NBFLGO#+</span>
+          <span className="login-pattern-text">C\L2NBFGO#+X&gt;S6N+</span>
+          <span className="login-pattern-text">VGO#+X&gt;HG6NBGHZ9+</span>
+          <span className="login-pattern-text">D&gt;KSO?AG6NBFLGO#+</span>
           <span className="login-pattern-text">PXJ&#123;AX0SHG6NH0LGO</span>
-          <span className="login-pattern-text">4SUSO5N1JGHZ9+D>K</span>
+          <span className="login-pattern-text">4SUSO5N1JGHZ9+D&gt;K</span>
         </div>
       </div>
 
