@@ -1,7 +1,6 @@
 import "./global.css";
 
 import { Toaster } from "@/components/ui/toaster";
-import { createRoot } from "react-dom/client";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -29,10 +28,4 @@ const App = () => (
   </QueryClientProvider>
 );
 
-// Create root once and render
-const container = document.getElementById("root");
-if (container && !container.hasAttribute('data-root-created')) {
-  container.setAttribute('data-root-created', 'true');
-  const root = createRoot(container);
-  root.render(<App />);
-}
+export default App;
