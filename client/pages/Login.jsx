@@ -193,12 +193,12 @@ export default function Login() {
 
             {/* Additional Options */}
             <div className="mt-6 text-center">
-              <a
-                href="#"
+              <Link
+                to="/forgot-password"
                 className="text-white opacity-70 text-[14px] font-inter hover:opacity-100 transition-opacity"
               >
                 Forgot your password?
-              </a>
+              </Link>
             </div>
           </div>
         </div>
