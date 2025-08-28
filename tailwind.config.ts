@@ -58,16 +58,16 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         // Vaultify brand colors
-        'vaultify': {
-          'dark': '#11111B',
-          'darker': '#1B1B2A',
-          'purple': '#B95DFE',
-          'purple-light': '#DAC8FF',
-          'green': '#8FE600',
-          'gradient-purple': '#6F26FF',
-          'text-gray': '#676666',
-          'text-light-gray': '#BEBCBC',
-        }
+        vaultify: {
+          dark: "#11111B",
+          darker: "#1B1B2A",
+          purple: "#B95DFE",
+          "purple-light": "#DAC8FF",
+          green: "#8FE600",
+          "gradient-purple": "#6F26FF",
+          "text-gray": "#676666",
+          "text-light-gray": "#BEBCBC",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -75,8 +75,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        'inter': ['Inter', 'sans-serif'],
-        'impact': ['Impact', 'sans-serif'],
+        inter: ["Inter", "sans-serif"],
+        impact: ["Impact", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
@@ -95,7 +95,7 @@ export default {
             height: "0",
           },
         },
-        "float": {
+        float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
         },
@@ -103,12 +103,15 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 6s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
       },
       backgroundImage: {
-        'vaultify-gradient': 'linear-gradient(90deg, rgba(255, 255, 255, 0.76) -352.73%, rgba(111, 38, 255, 0.76) 101.02%)',
-        'purple-gradient': 'linear-gradient(90deg, #FFF -153.79%, #6F26FF 100%)',
-        'purple-gradient-alt': 'linear-gradient(90deg, #FFF -181.37%, #6F26FF 100%)',
+        "vaultify-gradient":
+          "linear-gradient(90deg, rgba(255, 255, 255, 0.76) -352.73%, rgba(111, 38, 255, 0.76) 101.02%)",
+        "purple-gradient":
+          "linear-gradient(90deg, #FFF -153.79%, #6F26FF 100%)",
+        "purple-gradient-alt":
+          "linear-gradient(90deg, #FFF -181.37%, #6F26FF 100%)",
       },
     },
   },

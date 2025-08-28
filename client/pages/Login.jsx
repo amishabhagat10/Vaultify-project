@@ -4,21 +4,21 @@ import "./Login.css";
 
 export default function Login() {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: "",
   });
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login logic here
-    console.log('Login attempt:', formData);
+    console.log("Login attempt:", formData);
   };
 
   return (
@@ -58,9 +58,9 @@ export default function Login() {
 
       {/* Decorative Layer Overlay */}
       <div className="absolute inset-0">
-        <img 
-          src="https://api.builder.io/api/v1/image/assets/TEMP/1766c9cd4c8b0cb79006a344334927db4930ff14?width=2958" 
-          alt="Login Background" 
+        <img
+          src="https://api.builder.io/api/v1/image/assets/TEMP/1766c9cd4c8b0cb79006a344334927db4930ff14?width=2958"
+          alt="Login Background"
           className="w-full h-full object-cover opacity-20 mix-blend-overlay"
         />
       </div>
@@ -89,10 +89,12 @@ export default function Login() {
 
             {/* Register Link */}
             <div className="text-white text-[16px] font-normal font-inter">
-              If you don't have an account register{' '}
-              <br />
-              You can{' '}
-              <Link to="/" className="text-[#B95DFE] font-semibold hover:underline">
+              If you don't have an account register <br />
+              You can{" "}
+              <Link
+                to="/"
+                className="text-[#B95DFE] font-semibold hover:underline"
+              >
                 Register here !
               </Link>
             </div>
@@ -139,8 +141,17 @@ export default function Login() {
                   type="button"
                   className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white opacity-60 hover:opacity-100 transition-opacity"
                 >
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 3C13.866 3 17 6.134 17 10C17 13.866 13.866 17 10 17C6.134 17 3 13.866 3 10C3 6.134 6.134 3 10 3ZM10 5C7.239 5 5 7.239 5 10C5 12.761 7.239 15 10 15C12.761 15 15 12.761 15 10C15 7.239 12.761 5 10 5ZM10 7.5C11.381 7.5 12.5 8.619 12.5 10C12.5 11.381 11.381 12.5 10 12.5C8.619 12.5 7.5 11.381 7.5 10C7.5 8.619 8.619 7.5 10 7.5Z" fill="currentColor"/>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 3C13.866 3 17 6.134 17 10C17 13.866 13.866 17 10 17C6.134 17 3 13.866 3 10C3 6.134 6.134 3 10 3ZM10 5C7.239 5 5 7.239 5 10C5 12.761 7.239 15 10 15C12.761 15 15 12.761 15 10C15 7.239 12.761 5 10 5ZM10 7.5C11.381 7.5 12.5 8.619 12.5 10C12.5 11.381 11.381 12.5 10 12.5C8.619 12.5 7.5 11.381 7.5 10C7.5 8.619 8.619 7.5 10 7.5Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </button>
               </div>
@@ -156,7 +167,10 @@ export default function Login() {
 
             {/* Additional Options */}
             <div className="mt-6 text-center">
-              <a href="#" className="text-white opacity-70 text-[14px] font-inter hover:opacity-100 transition-opacity">
+              <a
+                href="#"
+                className="text-white opacity-70 text-[14px] font-inter hover:opacity-100 transition-opacity"
+              >
                 Forgot your password?
               </a>
             </div>

@@ -13,34 +13,34 @@
   :root {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    
+
     --card: 34 34 42%;
     --card-foreground: 210 40% 98%;
-    
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    
+
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    
+
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-    
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    
+
     --radius: 0.5rem;
-    
+
     /* Vaultify brand colors */
     --vaultify-dark: 240 5% 7%;
     --vaultify-darker: 240 5% 11%;
@@ -56,12 +56,12 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-vaultify-dark text-white font-inter;
     overflow-x: hidden;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -69,13 +69,13 @@
 
 @layer components {
   .vaultify-bg-gradient {
-    background: #11111B;
+    background: #11111b;
     position: relative;
     overflow: hidden;
   }
-  
+
   .vaultify-bg-gradient::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -84,7 +84,7 @@
     pointer-events: none;
     z-index: 0;
   }
-  
+
   .vaultify-gradient-orb {
     position: absolute;
     border-radius: 50%;
@@ -93,21 +93,21 @@
     pointer-events: none;
     z-index: 1;
   }
-  
+
   .vaultify-gradient-orb.purple {
-    background: #B95DFE;
+    background: #b95dfe;
   }
-  
+
   .vaultify-gradient-orb.green {
-    background: #8FE600;
+    background: #8fe600;
   }
-  
+
   .vaultify-gradient-orb.dark {
-    background: #1B1B2A;
+    background: #1b1b2a;
     filter: blur(130px);
     opacity: 1;
   }
-  
+
   .vaultify-pattern-text {
     position: absolute;
     font-family: Inter, sans-serif;
@@ -120,9 +120,9 @@
     z-index: 1;
     white-space: nowrap;
   }
-  
+
   .vaultify-btn-primary {
-    background: linear-gradient(90deg, #FFF -153.79%, #6F26FF 100%);
+    background: linear-gradient(90deg, #fff -153.79%, #6f26ff 100%);
     color: white;
     padding: 10px 22px;
     border-radius: 22px;
@@ -132,15 +132,15 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  
+
   .vaultify-btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(185, 93, 254, 0.3);
   }
-  
+
   .vaultify-btn-secondary {
-    background: #DAC8FF;
-    color: #B95DFE;
+    background: #dac8ff;
+    color: #b95dfe;
     padding: 10px 22px;
     border-radius: 22px;
     font-weight: 700;
@@ -149,12 +149,12 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  
+
   .vaultify-btn-secondary:hover {
-    background: #C5B0FF;
+    background: #c5b0ff;
     transform: translateY(-1px);
   }
-  
+
   .vaultify-feature-card {
     background: #222121;
     border-radius: 18px;
@@ -162,30 +162,34 @@
     overflow: hidden;
     transition: all 0.3s ease;
   }
-  
+
   .vaultify-feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   }
-  
+
   .vaultify-faq-section {
     background: rgba(32, 24, 47, 0.14);
     backdrop-filter: blur(263px);
     border-radius: 45px;
     padding: 42px;
   }
-  
+
   .vaultify-faq-item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px 0;
   }
-  
+
   .vaultify-faq-item:last-child {
     border-bottom: none;
   }
-  
+
   .vaultify-title-gradient {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.76) -352.73%, rgba(111, 38, 255, 0.76) 101.02%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.76) -352.73%,
+      rgba(111, 38, 255, 0.76) 101.02%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -196,7 +200,7 @@
   .text-shadow-glow {
     text-shadow: 0 0 20px rgba(185, 93, 254, 0.5);
   }
-  
+
   .backdrop-blur-vaultify {
     backdrop-filter: blur(263px);
   }
