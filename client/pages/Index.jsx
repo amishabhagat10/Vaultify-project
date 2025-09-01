@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useWallet } from "../hooks/use-wallet";
 import "./Index.css";
+<<<<<<< HEAD
 import Faq from "./Faq";
 
 function AboutUsSection() {
@@ -89,6 +90,8 @@ function AboutUsSection() {
     </section>
   );
 }
+=======
+>>>>>>> bc7e5d2d9a1a23fdd466dbe484548ee368d68cf0
 
 export default function Index() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -543,6 +546,7 @@ export default function Index() {
         </section>
 
         {/* FAQ Section */}
+<<<<<<< HEAD
         <Faq />
 
         {/* About Us section */}
@@ -640,11 +644,274 @@ export default function Index() {
                   style={{ backgroundColor: social.color }}
                 />
               ))}
+=======
+        <section id="faq" className="py-12 sm:py-20 px-4 sm:px-8 relative z-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="text-white text-2xl sm:text-3xl lg:text-[41px] font-bold font-inter mb-4">
+                FAQs
+              </h2>
+              <p className="text-vaultify-text-gray text-xl sm:text-2xl lg:text-[41px] font-bold font-inter">
+                Got questions? We've got you covered.
+              </p>
+            </div>
+
+            <div className="vaultify-faq-section relative">
+              {[
+                {
+                  question: "Are my documents stored on the blockchain?",
+                  answer:
+                    "No. We only store the cryptographic hash of your document on-chain. The actual file remains encrypted and can be deleted at your discretion.",
+                },
+                {
+                  question: "Do I need a crypto wallet to use Vaultify?",
+                  answer:
+                    "Yes, you need a crypto wallet to authenticate and interact with the blockchain features of Vaultify.",
+                },
+                {
+                  question: "What if I lose my encryption key?",
+                  answer:
+                    "If you lose your encryption key, the data cannot be recovered. We recommend storing your keys securely and having backup procedures in place.",
+                },
+                {
+                  question: "Can I revoke a document I shared?",
+                  answer:
+                    "Yes, you can revoke access to shared documents at any time through your Vaultify dashboard.",
+                },
+                {
+                  question: "Can I prove ownership of a document later?",
+                  answer:
+                    "Yes, the blockchain record provides immutable proof of when you uploaded and owned the document.",
+                },
+              ].map((faq, index) => (
+                <div key={index} className="vaultify-faq-item">
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="flex justify-between items-center w-full text-left"
+                  >
+                    <h3 className="text-white text-[23px] font-medium font-inter pr-4">
+                      {faq.question}
+                    </h3>
+                    <svg
+                      width="19"
+                      height="19"
+                      viewBox="0 0 19 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`flex-shrink-0 transition-transform duration-300 ${
+                        openFaq === index ? "rotate-45" : ""
+                      }`}
+                    >
+                      <path
+                        d="M15.9348 7.93721H10.8617V2.86416C10.8617 2.24166 10.3569 1.73682 9.73438 1.73682H8.60703C7.98453 1.73682 7.47969 2.24166 7.47969 2.86416V7.93721H2.40664C1.78414 7.93721 1.2793 8.44205 1.2793 9.06455V10.1919C1.2793 10.8144 1.78414 11.3192 2.40664 11.3192H7.47969V16.3923C7.47969 17.0148 7.98453 17.5196 8.60703 17.5196H9.73438C10.3569 17.5196 10.8617 17.0148 10.8617 16.3923V11.3192H15.9348C16.5573 11.3192 17.0621 10.8144 17.0621 10.1919V9.06455C17.0621 8.44205 16.5573 7.93721 15.9348 7.93721Z"
+                        fill="#F9F9F9"
+                      />
+                    </svg>
+                  </button>
+                  {openFaq === index && (
+                    <div className="mt-4">
+                      <p className="text-[#4B5563] text-[12px] font-inter leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              ))}
+
+              <div className="absolute right-0 top-16 w-[552px] h-[500px] hidden lg:block">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/81f575f7891b27034c2e6099f62d0b380bb54f65?width=1103"
+                  alt="FAQ Illustration"
+                  className="w-full h-full object-contain opacity-80"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-12 sm:py-20 px-4 sm:px-8 relative z-20">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-white text-2xl sm:text-3xl lg:text-[41px] font-bold font-inter mb-4">
+              Start Your Vault
+            </h2>
+            <p className="text-vaultify-text-gray text-lg sm:text-xl lg:text-[27px] font-bold font-inter mb-8">
+              Store, verify, and share with blockchain-level security.
+            </p>
+            {/* CTA actions removed as requested */}
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="py-12 sm:py-16 px-4 sm:px-8 relative z-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 mb-8">
+              <a
+                href="#"
+                className="text-vaultify-text-light-gray text-sm font-bold font-inter hover:text-white transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="#"
+                className="text-vaultify-text-light-gray text-sm font-bold font-inter hover:text-white transition-colors"
+              >
+                Concept
+              </a>
+              <a
+                href="#"
+                className="text-vaultify-text-light-gray text-sm font-bold font-inter hover:text-white transition-colors"
+              >
+                Rent
+              </a>
+              <a
+                href="#"
+                className="text-vaultify-text-light-gray text-sm font-bold font-inter hover:text-white transition-colors"
+              >
+                Mission
+              </a>
+              <a
+                href="#"
+                className="text-vaultify-text-light-gray text-sm font-bold font-inter hover:text-white transition-colors"
+              >
+                Resources
+              </a>
+              <a
+                href="#"
+                className="text-vaultify-text-light-gray text-sm font-bold font-inter hover:text-white transition-colors"
+              >
+                Contact
+              </a>
+            </div>
+
+            <div className="text-center mb-8">
+              <p className="text-vaultify-text-light-gray text-xs font-inter">
+                © 2025 Houzie Proptech OPC PVT LTD
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 mb-8">
+              <a
+                href="#"
+                className="text-vaultify-text-light-gray text-xs font-inter hover:text-white transition-colors"
+              >
+                Legal Notices
+              </a>
+              <a
+                href="#"
+                className="text-vaultify-text-light-gray text-xs font-inter hover:text-white transition-colors"
+              >
+                Confidentiality
+              </a>
+              <a
+                href="#"
+                className="text-vaultify-text-light-gray text-xs font-inter hover:text-white transition-colors"
+              >
+                Credits
+              </a>
+            </div>
+
+            <div className="flex justify-center items-center space-x-4">
+              <a
+                href="#"
+                className="w-4 h-4 opacity-80 hover:opacity-100 transition-opacity"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.01379 9.26216V15.5066H9.41931V9.26216H11.9588L12.4872 6.39096H9.41931V5.37518C9.41931 3.85737 10.0153 3.27609 11.5536 3.27609C12.0322 3.27609 12.4168 3.28783 12.6399 3.31132V0.707269C12.2201 0.592773 11.1925 0.475342 10.5995 0.475342C7.46114 0.475342 6.01379 1.95792 6.01379 5.15499V6.39096H4.07617V9.26216H6.01379Z"
+                    fill="#7027FE"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                className="w-4 h-4 opacity-80 hover:opacity-100 transition-opacity"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.4022 4.92944C14.4117 5.06296 14.4117 5.19651 14.4117 5.33003C14.4117 9.40256 11.312 14.0951 5.64666 14.0951C3.90127 14.0951 2.2799 13.5896 0.916016 12.7121C1.164 12.7407 1.40242 12.7503 1.65995 12.7503C3.1001 12.7503 4.42584 12.2639 5.48452 11.4341C4.13018 11.4055 2.9952 10.5185 2.60415 9.29766C2.79492 9.32626 2.98566 9.34534 3.18597 9.34534C3.46255 9.34534 3.73916 9.30717 3.99666 9.24044C2.5851 8.95429 1.5264 7.71442 1.5264 6.21702V6.17888C1.9365 6.40779 2.41342 6.55085 2.91887 6.5699C2.0891 6.01671 1.54548 5.0725 1.54548 4.00428C1.54548 3.43204 1.69805 2.90747 1.96512 2.44967C3.4816 4.31903 5.7611 5.53982 8.31714 5.67337C8.26947 5.44447 8.24084 5.20605 8.24084 4.96761C8.24084 3.2699 9.61427 1.88696 11.3215 1.88696C12.2085 1.88696 13.0096 2.25893 13.5724 2.8598C14.2686 2.72628 14.9362 2.46875 15.5276 2.11587C15.2986 2.8312 14.8122 3.43207 14.1732 3.81355C14.7932 3.74682 15.394 3.5751 15.9472 3.33669C15.5276 3.94707 15.003 4.49069 14.4022 4.92944Z"
+                    fill="#7027FE"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                className="w-4 h-4 opacity-80 hover:opacity-100 transition-opacity"
+              >
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.14459 1.72852C9.84943 1.72968 10.2066 1.73341 10.5153 1.7426L10.6368 1.74657C10.7772 1.75156 10.9158 1.75783 11.0828 1.76566C11.7493 1.79645 12.2039 1.90188 12.6032 2.05689C13.016 2.21607 13.3646 2.4311 13.7127 2.77922C14.0603 3.12734 14.2754 3.47703 14.4351 3.88882C14.5895 4.28757 14.695 4.74268 14.7263 5.40917C14.7338 5.57618 14.7398 5.71472 14.7447 5.85516L14.7487 5.97672C14.7578 6.28533 14.762 6.64256 14.7633 7.34743L14.7638 7.8144C14.7639 7.87146 14.7639 7.93033 14.7639 7.99108L14.7638 8.16776L14.7635 8.63479C14.7623 9.33963 14.7586 9.69688 14.7494 10.0055L14.7454 10.127C14.7404 10.2675 14.7341 10.406 14.7263 10.573C14.6955 11.2395 14.5895 11.6941 14.4351 12.0934C14.2759 12.5062 14.0603 12.8549 13.7127 13.203C13.3646 13.5506 13.0144 13.7656 12.6032 13.9253C12.2039 14.0798 11.7493 14.1852 11.0828 14.2165C10.9158 14.224 10.7772 14.2301 10.6368 14.2349L10.5153 14.2389C10.2066 14.2481 9.84943 14.2522 9.14459 14.2536L8.67756 14.2541C8.6205 14.2541 8.56163 14.2541 8.50088 14.2541H8.3242L7.85716 14.2537C7.15232 14.2525 6.79509 14.2488 6.48648 14.2396L6.36493 14.2356C6.22448 14.2306 6.08594 14.2243 5.91893 14.2165C5.25244 14.1858 4.79837 14.0798 4.39859 13.9253C3.98627 13.7661 3.6371 13.5506 3.28898 13.203C2.94087 12.8549 2.72636 12.5046 2.56665 12.0934C2.41164 11.6941 2.30674 11.2395 2.27542 10.573C2.26798 10.406 2.26191 10.2675 2.257 10.127L2.25306 10.0055C2.24389 9.69688 2.23972 9.33963 2.23836 8.63479L2.23828 7.34743C2.23945 6.64256 2.24317 6.28533 2.25236 5.97672L2.25634 5.85516C2.26133 5.71472 2.26759 5.57618 2.27542 5.40917C2.30621 4.74216 2.41164 4.28809 2.56665 3.88882C2.72583 3.47651 2.94087 3.12734 3.28898 2.77922C3.6371 2.4311 3.98679 2.21659 4.39859 2.05689C4.79785 1.90188 5.25192 1.79697 5.91893 1.76566C6.08594 1.75822 6.22448 1.75215 6.36493 1.74724L6.48648 1.7433C6.79509 1.73413 7.15232 1.72995 7.85716 1.7286L9.14459 1.72852ZM8.50088 4.85959C6.77045 4.85959 5.36935 6.26221 5.36935 7.99108C5.36935 9.72149 6.77198 11.1226 8.50088 11.1226C10.2313 11.1226 11.6324 9.71999 11.6324 7.99108C11.6324 6.26069 10.2297 4.85959 8.50088 4.85959ZM8.50088 6.11219C9.5386 6.11219 10.3798 6.95311 10.3798 7.99108C10.3798 9.0288 9.53885 9.86998 8.50088 9.86998C7.46316 9.86998 6.62196 9.02911 6.62196 7.99108C6.62196 6.95336 7.46284 6.11219 8.50088 6.11219ZM11.789 3.92013C11.3573 3.92013 11.0061 4.27081 11.0061 4.70248C11.0061 5.13416 11.3568 5.48537 11.789 5.48537C12.2206 5.48537 12.5718 5.1347 12.5718 4.70248C12.5718 4.27081 12.22 3.9196 11.789 3.92013Z"
+                    fill="#7027FE"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                className="w-4 h-4 opacity-80 hover:opacity-100 transition-opacity"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.9362 13.6276H1.20944V4.84668H3.9362V13.6276ZM2.57135 3.64888C1.69942 3.64888 0.992188 2.92668 0.992188 2.05475C0.992188 1.63593 1.15856 1.23426 1.45471 0.938112C1.75086 0.641961 2.15253 0.475586 2.57135 0.475586C2.99017 0.475586 3.39184 0.641961 3.68799 0.938112C3.98414 1.23426 4.15051 1.63593 4.15051 2.05475C4.15051 2.92668 3.44299 3.64888 2.57135 3.64888ZM14.1416 13.6276H11.4207V9.35312C11.4207 8.3344 11.4002 7.02798 10.003 7.02798C8.58532 7.02798 8.36807 8.13477 8.36807 9.27973V13.6276H5.64424V4.84668H8.25944V6.04449H8.29761C8.66165 5.35458 9.5509 4.6265 10.8776 4.6265C13.6372 4.6265 14.1445 6.44376 14.1445 8.80413V13.6276H14.1416Z"
+                    fill="#7027FE"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                className="w-4 h-4 opacity-80 hover:opacity-100 transition-opacity"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.68561 2.35303H7.76922C8.54145 2.35585 12.4543 2.38403 13.5093 2.66774C13.8282 2.75433 14.1188 2.92311 14.3521 3.15721C14.5854 3.39131 14.7531 3.68253 14.8386 4.00177C14.9335 4.35876 15.0002 4.8313 15.0453 5.31888L15.0547 5.41658L15.0753 5.66084L15.0829 5.75854C15.1439 6.61721 15.1514 7.42138 15.1524 7.59705V7.66751C15.1514 7.84977 15.143 8.70843 15.0753 9.60279L15.0678 9.70143L15.0594 9.79913C15.0124 10.3365 14.9429 10.8701 14.8386 11.2628C14.7531 11.582 14.5854 11.8733 14.3521 12.1074C14.1188 12.3415 13.8282 12.5102 13.5093 12.5968C12.4195 12.8899 8.27746 12.9106 7.70346 12.9115H7.57005C7.27976 12.9115 6.07914 12.9059 4.82027 12.8627L4.66057 12.8571L4.57884 12.8533L4.41819 12.8467L4.25754 12.8401C3.21475 12.7941 2.22175 12.7199 1.76423 12.5959C1.44541 12.5094 1.15486 12.3407 0.921593 12.1068C0.688328 11.8729 0.520514 11.5819 0.434908 11.2628C0.330629 10.871 0.261109 10.3365 0.214137 9.79913L0.206621 9.70049L0.199105 9.60279C0.152474 8.96623 0.126782 8.32831 0.12207 7.69006L0.12207 7.57451C0.123949 7.37253 0.131465 6.67451 0.182195 5.90416L0.188771 5.8074L0.19159 5.75854L0.199105 5.66084L0.219773 5.41658L0.229168 5.31888C0.274262 4.8313 0.340963 4.35782 0.435848 4.00177C0.52131 3.68253 0.68906 3.39131 0.922334 3.15721C1.15561 2.92311 1.44624 2.75433 1.76517 2.66774C2.22269 2.54562 3.21569 2.47046 4.25848 2.42349L4.41819 2.41691L4.57977 2.41127L4.66057 2.40846L4.82121 2.40188C5.7153 2.37314 6.60975 2.35716 7.50429 2.35397L7.68561 2.35303ZM6.13457 5.36867V9.89496L10.0399 7.63275L6.13457 5.36867Z"
+                    fill="#7027FE"
+                  />
+                </svg>
+              </a>
+>>>>>>> bc7e5d2d9a1a23fdd466dbe484548ee368d68cf0
             </div>
           </div>
         </footer>
 
+<<<<<<< HEAD
         
+=======
+        {/* Large Brand Text */}
+        <div className="absolute bottom-0 left-0 right-0 text-center py-8 sm:py-20 z-10">
+          <h1 className="vaultify-title-gradient font-impact text-6xl sm:text-8xl lg:text-[200px] xl:text-[344px] font-normal leading-none pointer-events-none select-none">
+            VAULTIFY
+          </h1>
+        </div>
+>>>>>>> bc7e5d2d9a1a23fdd466dbe484548ee368d68cf0
       </div>
     </div>
   );
