@@ -65,14 +65,24 @@ export default function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
-      // Handle registration logic here
-      console.log("Registration attempt:", {
-        ...formData,
-        walletAddress: account || null,
-      });
-      // You would typically send this data to your backend API
+      const key = (formData.email || "").trim().toLowerCase();
+      const fullName = `${formData.firstName.trim()} ${formData.lastName.trim()}`
+        .replace(/\s+/g, " ")
+        .trim();
+
+      try {
+        const usersRaw = localStorage.getItem("vaultifyUsers");
+        const users = usersRaw ? JSON.parse(usersRaw) : {};
+        users[key] = { fullName, email: key };
+        localStorage.setItem("vaultifyUsers", JSON.stringify(users));
+        localStorage.setItem("vaultifyCurrentUserName", fullName);
+      } catch {
+        // ignore storage errors
+      }
+
+      navigate("/dashboard");
     }
   };
 

@@ -17,8 +17,40 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log("Login attempt:", formData);
+
+    const emailKey = (formData.email || "").trim().toLowerCase();
+    let displayName = "";
+
+    try {
+      const usersRaw = localStorage.getItem("vaultifyUsers");
+      if (usersRaw) {
+        const users = JSON.parse(usersRaw);
+        if (users && users[emailKey] && users[emailKey].fullName) {
+          displayName = users[emailKey].fullName;
+        }
+      }
+    } catch {
+      // ignore JSON/localStorage errors
+    }
+
+    if (!displayName) {
+      const beforeAt = emailKey.split("@")[0] || "";
+      displayName = beforeAt
+        ? beforeAt
+            .replace(/[._-]+/g, " ")
+            .replace(/\s+/g, " ")
+            .trim()
+            .replace(/\b\w/g, (c) => c.toUpperCase())
+        : "User";
+    }
+
+    try {
+      localStorage.setItem("vaultifyCurrentUserName", displayName);
+    } catch {
+      // ignore storage write errors
+    }
+
+    navigate("/dashboard");
   };
 
   const navigate = useNavigate();

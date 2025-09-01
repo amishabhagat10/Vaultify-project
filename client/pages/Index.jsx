@@ -16,6 +16,7 @@ export default function Index() {
     formatAddress
   } = useWallet();
 
+
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
