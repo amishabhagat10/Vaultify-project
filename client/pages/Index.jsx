@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useWallet } from "../hooks/use-wallet";
 import "./Index.css";
-<<<<<<< HEAD
 import Faq from "./Faq";
 
 function AboutUsSection() {
@@ -90,8 +89,7 @@ function AboutUsSection() {
     </section>
   );
 }
-=======
->>>>>>> bc7e5d2d9a1a23fdd466dbe484548ee368d68cf0
+
 
 export default function Index() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -546,201 +544,13 @@ export default function Index() {
         </section>
 
         {/* FAQ Section */}
-<<<<<<< HEAD
         <Faq />
 
         {/* About Us section */}
         <AboutUsSection />
 
 
-        {/* This is the VAULTIFY Watermark section */}
-        <div className="relative pointer-events-none overflow-hidden">
-          <div
-            className="text-center text-[280px] lg:text-[344px] font-black transform translate-y-[30%] opacity-50"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(255, 255, 255, 0.76) -352.73%, rgba(111, 38, 255, 0.76) 101.02%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              fontFamily: "Impact, -apple-system, Roboto, Helvetica, sans-serif",
-              lineHeight: "1",
-            }}
-          >
-            VAULTIFY
-          </div>
-        </div>
 
-        {/* This is the footer section */}
-        <footer className="relative z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-12">
-          <div className="max-w-7xl mx-auto px-4">
-            {/* Navigation Links */}
-            <div className="flex flex-wrap justify-center gap-8 mb-6">
-              <Link
-                to="/about"
-                className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                to="/concept"
-                className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-              >
-                Concept
-              </Link>
-              <Link
-                to="/rent"
-                className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-              >
-                Rent
-              </Link>
-              <Link
-                to="/mission"
-                className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-              >
-                Mission
-              </Link>
-              <Link
-                to="/resources"
-                className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-              >
-                Resources
-              </Link>
-              <Link
-                to="/contact"
-                className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-              >
-                Contact
-              </Link>
-            </div>
-
-            {/* Copyright and Legal */}
-            <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-gray-400 mb-6">
-              <span>© 2025 Houzie Proptech OPC PVT LTD</span>
-              <Link to="/legal" className="hover:text-white transition-colors">
-                Legal Notices
-              </Link>
-              <Link to="/privacy" className="hover:text-white transition-colors">
-                Confidentiality
-              </Link>
-              <Link to="/credits" className="hover:text-white transition-colors">
-                Credits
-              </Link>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex justify-center space-x-4">
-              {[
-                { icon: "facebook", color: "#7027FE" },
-                { icon: "twitter", color: "#7027FE" },
-                { icon: "instagram", color: "#7027FE" },
-                { icon: "linkedin", color: "#7027FE" },
-                { icon: "youtube", color: "#7027FE" },
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="w-4 h-4 rounded-full hover:opacity-80 transition-opacity"
-                  style={{ backgroundColor: social.color }}
-                />
-              ))}
-=======
-        <section id="faq" className="py-12 sm:py-20 px-4 sm:px-8 relative z-20">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 lg:mb-16">
-              <h2 className="text-white text-2xl sm:text-3xl lg:text-[41px] font-bold font-inter mb-4">
-                FAQs
-              </h2>
-              <p className="text-vaultify-text-gray text-xl sm:text-2xl lg:text-[41px] font-bold font-inter">
-                Got questions? We've got you covered.
-              </p>
-            </div>
-
-            <div className="vaultify-faq-section relative">
-              {[
-                {
-                  question: "Are my documents stored on the blockchain?",
-                  answer:
-                    "No. We only store the cryptographic hash of your document on-chain. The actual file remains encrypted and can be deleted at your discretion.",
-                },
-                {
-                  question: "Do I need a crypto wallet to use Vaultify?",
-                  answer:
-                    "Yes, you need a crypto wallet to authenticate and interact with the blockchain features of Vaultify.",
-                },
-                {
-                  question: "What if I lose my encryption key?",
-                  answer:
-                    "If you lose your encryption key, the data cannot be recovered. We recommend storing your keys securely and having backup procedures in place.",
-                },
-                {
-                  question: "Can I revoke a document I shared?",
-                  answer:
-                    "Yes, you can revoke access to shared documents at any time through your Vaultify dashboard.",
-                },
-                {
-                  question: "Can I prove ownership of a document later?",
-                  answer:
-                    "Yes, the blockchain record provides immutable proof of when you uploaded and owned the document.",
-                },
-              ].map((faq, index) => (
-                <div key={index} className="vaultify-faq-item">
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className="flex justify-between items-center w-full text-left"
-                  >
-                    <h3 className="text-white text-[23px] font-medium font-inter pr-4">
-                      {faq.question}
-                    </h3>
-                    <svg
-                      width="19"
-                      height="19"
-                      viewBox="0 0 19 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className={`flex-shrink-0 transition-transform duration-300 ${
-                        openFaq === index ? "rotate-45" : ""
-                      }`}
-                    >
-                      <path
-                        d="M15.9348 7.93721H10.8617V2.86416C10.8617 2.24166 10.3569 1.73682 9.73438 1.73682H8.60703C7.98453 1.73682 7.47969 2.24166 7.47969 2.86416V7.93721H2.40664C1.78414 7.93721 1.2793 8.44205 1.2793 9.06455V10.1919C1.2793 10.8144 1.78414 11.3192 2.40664 11.3192H7.47969V16.3923C7.47969 17.0148 7.98453 17.5196 8.60703 17.5196H9.73438C10.3569 17.5196 10.8617 17.0148 10.8617 16.3923V11.3192H15.9348C16.5573 11.3192 17.0621 10.8144 17.0621 10.1919V9.06455C17.0621 8.44205 16.5573 7.93721 15.9348 7.93721Z"
-                        fill="#F9F9F9"
-                      />
-                    </svg>
-                  </button>
-                  {openFaq === index && (
-                    <div className="mt-4">
-                      <p className="text-[#4B5563] text-[12px] font-inter leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ))}
-
-              <div className="absolute right-0 top-16 w-[552px] h-[500px] hidden lg:block">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/81f575f7891b27034c2e6099f62d0b380bb54f65?width=1103"
-                  alt="FAQ Illustration"
-                  className="w-full h-full object-contain opacity-80"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-12 sm:py-20 px-4 sm:px-8 relative z-20">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-white text-2xl sm:text-3xl lg:text-[41px] font-bold font-inter mb-4">
-              Start Your Vault
-            </h2>
-            <p className="text-vaultify-text-gray text-lg sm:text-xl lg:text-[27px] font-bold font-inter mb-8">
-              Store, verify, and share with blockchain-level security.
-            </p>
-            {/* CTA actions removed as requested */}
-          </div>
-        </section>
 
         {/* Footer */}
         <footer className="py-12 sm:py-16 px-4 sm:px-8 relative z-20">
@@ -897,21 +707,34 @@ export default function Index() {
                   />
                 </svg>
               </a>
->>>>>>> bc7e5d2d9a1a23fdd466dbe484548ee368d68cf0
+
             </div>
           </div>
         </footer>
 
-<<<<<<< HEAD
-        
-=======
-        {/* Large Brand Text */}
-        <div className="absolute bottom-0 left-0 right-0 text-center py-8 sm:py-20 z-10">
-          <h1 className="vaultify-title-gradient font-impact text-6xl sm:text-8xl lg:text-[200px] xl:text-[344px] font-normal leading-none pointer-events-none select-none">
+        {/* This is the VAULTIFY Watermark section */}
+        <div className="relative pointer-events-none overflow-hidden">
+          <div
+            className="text-center text-[280px] lg:text-[344px] font-black transform translate-y-[30%] opacity-50"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(255, 255, 255, 0.76) -352.73%, rgba(111, 38, 255, 0.76) 101.02%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              fontFamily: "Impact, -apple-system, Roboto, Helvetica, sans-serif",
+              lineHeight: "1",
+            }}
+          >
             VAULTIFY
-          </h1>
+          </div>
         </div>
->>>>>>> bc7e5d2d9a1a23fdd466dbe484548ee368d68cf0
+
+
+        
+
+        
+
       </div>
     </div>
   );
